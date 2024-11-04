@@ -1,0 +1,18 @@
+{
+    "name": "iloaid/sanctions",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Iloaid\\Sanctions\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "iloaid",
+            "email": "ilod0283@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^3.3"
+    }
+}
