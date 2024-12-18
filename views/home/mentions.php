@@ -1,4 +1,4 @@
-<?php $title = "Mentions - Mon Site"; ?>
+<?php $title = "Mentions - Gaudper Sanction"; ?>
 
 <div class="text-center">
     <h1 class="mb-4">Mentions Légales</h1>

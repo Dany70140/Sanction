@@ -15,7 +15,7 @@
                 <ul class="navbar-nav">
                     <?php if (isset($_SESSION['user'])): ?>
                         <li class="nav-item">
-                            <p class="btn btn-warning">connecté en tant que <?php echo $_SESSION['user']['pseudo']?></p>
+                            <p class="btn btn-outline-success">connecté en tant que <?php echo $_SESSION['user']['pseudo']?></p>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/profil">Mon Profil</a>

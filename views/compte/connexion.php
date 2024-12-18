@@ -1,4 +1,4 @@
-<?php $title = "Connexion - Mon Site"; ?>
+<?php $title = "Connexion - Gaudper Sanction"; ?>
 
 <div class="row justify-content-center">
     <div class="col-md-6">

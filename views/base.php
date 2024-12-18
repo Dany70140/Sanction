@@ -43,13 +43,13 @@
                 <ul class="navbar-nav">
                     <?php if (isset($_SESSION['user'])): ?>
                         <li class="nav-item">
-                            <p class="btn btn-warning">Connecté en tant que <?php echo $_SESSION['user']['nom']?></p>
+                            <p class="btn btn-success">Connecté en tant que <?php echo $_SESSION['user']['nom']?></p>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/promotion">Ajouter une promotion</a>
+                            <a class="ms-2 nav-link btn btn-outline-warning text-black" href="/promotion">Ajouter une promotion</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-danger" href="/compte/disconnect"
+                            <a class="ms-2 av-link btn btn-outline-danger" href="/compte/disconnect"
                                onclick="return confirm('Voulez vous vous vous vous déconnectez vous ?')">
                                 Déconnexion
                             </a>
@@ -119,7 +119,7 @@
     <div class="bg-secondary py-4 text-dark">
         <div class="container text-center">
             <p class="text-muted mb-0 py-2 text-dark">Web site create by Iloai Dany SIO2-SLAM</p>
-            <p class="mb-0">&copy; <?= date('Y') ?> Tous droits réservés</p>
+            <p class="mb-0">Tous droits réservés <?= date('Y') ?> &copy;</p>
         </div>
     </div>
 </footer>

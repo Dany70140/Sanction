@@ -48,7 +48,7 @@ class PromotionControleur extends AbstractController {
                     'annee' => $annee,
                 ];
                 // Rediriger vers le formulaire
-                // $this->render('/promotion');
+                 $this->render('/promotion');
                 exit;
             }
         }

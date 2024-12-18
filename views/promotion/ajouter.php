@@ -1,4 +1,4 @@
-<?php $title = "Ajouter une promotion - Mon Site"; ?>
+<?php $title = "Ajouter une promotion - Gaudper Sanction"; ?>
 
 <div class="row justify-content-center bg-secondary mt-3 arrondir border border-2 border-black shadow p-2">
     <div class="col-md-6">
@@ -38,8 +38,7 @@
 
             <div class="mb-3">
                 <label for="annee" class="form-label">Année*</label>
-                <input type="number"
-                       min="0"
+                <input type="date"
                        minlength="4"
                        maxlength="4"
                        class="form-control"
@@ -64,6 +63,5 @@
         <?php
         // Nettoyer les données du formulaire après affichage
         unset($_SESSION['form_data']); ?>
-
     </div>
 </div>

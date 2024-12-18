@@ -15,6 +15,6 @@ return [
     //promotion
     '/promotion/ajouter' => ['PromotionControleur', 'ajouter'],
     '/promotion/promotion' => ['PromotionControleur', 'promotions'],
-    //legal
+    //mentions
     '/mentions' => ['HomeController', 'legal']
 ];

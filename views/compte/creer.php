@@ -1,4 +1,4 @@
-<?php $title = "Créer un compte - Mon Site"; ?>
+<?php $title = "Créer un compte - Gaudper Sanction"; ?>
 
 <div class="row justify-content-center">
     <div class="col-md-6">

@@ -1,12 +1,12 @@
-<div class="text-center">
-    <h1 class="mb-4">Gaudper Sanctions</h1>
-</div>
-
-<div class="row">
+<div class="row mt-5">
     <div class="col bg-dark arrondir border border-2 border-black p-3 me-5">
-        <h1 class=" bg-warning arrondir p-3 me-5 border border-black border-2">Bienvenue sur le site</h1>
+        <?php if (isset($_SESSION['user'])): ?>
+        <h1 class=" bg-warning arrondir p-3 me-5 border border-black border-2">Bienvenue <?= $_SESSION['user']['prenom'] ?></h1>
+        <?php else: ?>
+        <h1 class=" bg-warning arrondir p-3 me-5 border border-black border-2">Bienvenue sur le site Gaudper Sanction</h1>
+        <?php endif; ?>
         <h4 class="text-white mt-5 text-center">
-            Ceci est un site qui permet la gestion des sanctions du lycée gaudper
+            Ceci est un site qui permet la gestion des sanctions du lycée Gaudper
         </h4>
     </div>
 
@@ -20,14 +20,14 @@
 <div class="text-center">
     <?php if (isset($_SESSION['message'])):
     foreach ($_SESSION['message'] as $item) {?>
-        <div class="alert alert-success">
+        <div class="alert alert-danger">
             <?= $item ?> !
         </div>
         <?php } ?>
     <?php endif; ?>
 
     <?php if (isset($_SESSION['user'])): ?>
-        <div class="alert alert-success">
+        <div class="alert alert-secondary mt-3">
             Bonjour <?= $_SESSION['user']['prenom'] ?> !
         </div>
         <div class="mt-4">

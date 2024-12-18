@@ -1,4 +1,4 @@
-<?php $title = "Promotions - Mon Site"; ?>
+<?php $title = "Promotions - Gaudper Sanction"; ?>
 
 <div class="text-center">
     <h1 class="mb-4">Listes des promotions</h1>
