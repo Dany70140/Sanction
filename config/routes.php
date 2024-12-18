@@ -13,8 +13,7 @@ return [
     '/connexion' => ['VueControleur', 'connexion'],
     '/promotion' => ['VueControleur', 'promotion'],
     //promotion
-    '/promotion/ajouter' => ['PromotionControleur', 'ajouter'],
-    '/promotion/promotion' => ['PromotionControleur', 'promotions'],
+    '/promotion/ajouter' => ['PromotionController', 'ajouter'],
     //mentions
     '/mentions' => ['HomeController', 'legal']
 ];

@@ -25,26 +25,27 @@
             </div>
         <?php endif; ?>
 
-        <form action="/promotion/ajouter" method="POST" class="needs-validation" novalidate>
+        <form action="/promotion" method="POST" class="needs-validation" novalidate>
             <div class="mb-3">
                 <label for="libelle" class="form-label">Libellé*</label>
                 <input type="text"
                        class="form-control"
                        id="libelle"
                        name="libelle"
-                       value="<?= htmlspecialchars($_SESSION['form_data']['libelle'] ?? '') ?>"
+                       value="<?=$_SESSION['form_data']['libelle'] ?>"
                        required>
             </div>
 
             <div class="mb-3">
                 <label for="annee" class="form-label">Année*</label>
-                <input type="date"
+                <input type="number"
+                       min="0"
                        minlength="4"
                        maxlength="4"
                        class="form-control"
                        id="annee"
                        name="annee"
-                       value="<?= htmlspecialchars($_SESSION['form_data']['annee'] ?? '') ?>"
+                       value="<?= $_SESSION['form_data']['annee'] ?>"
                        required>
             </div>
 
@@ -52,16 +53,12 @@
                 <button type="submit" class="btn btn-outline-warning">Ajouter la promotion</button>
             </div>
 
-            <div class="mb-3 mt-5">
-                <p class="fs-4">Importer une promotion sous la forme d'un fichier .csv</p>
-                <label class="form-label" for="input_import_file">Parcourir les fichiers : </label>
-                <input class="form-control" type="file" name="import_file" id="input_import_file" accept="text/csv">
-            </div>
-
+         <?php //   <div class="mb-3 mt-5">
+             //   <p class="fs-4">Importer une promotion sous la forme d'un fichier .csv</p>
+             //   <label class="form-label" for="input_import_file">Parcourir les fichiers : </label>
+             //   <input class="form-control" type="file" name="import_file" id="input_import_file" accept="text/csv">
+        //    </div>
+?>
         </form>
-
-        <?php
-        // Nettoyer les données du formulaire après affichage
-        unset($_SESSION['form_data']); ?>
     </div>
 </div>

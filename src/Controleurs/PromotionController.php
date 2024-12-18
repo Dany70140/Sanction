@@ -6,8 +6,7 @@ use App\UsersStory\Promotion;
 use App\UsersStory\CreateAccount;
 use Doctrine\ORM\EntityManager;
 
-
-class PromotionControleur extends AbstractController {
+class PromotionController extends AbstractController {
     private EntityManager $entityManager;
 
     /**
@@ -26,17 +25,19 @@ class PromotionControleur extends AbstractController {
 
                 // Tenter de créer la promotion
                 $newProm =  new Promotion($this->entityManager);
+                $newProm->setLibelle($libelle);
+                $newProm->setAnnee($annee);
                 try {
                     $newProm-> ajouterProm($libelle, $annee);
+                    // Si la création réussit
+                    $_SESSION["message"]['success'] = "La promotion créé avec succès !";
+                    // Redirection vers l'accueil
+                    $this->redirect('/');
+                    exit;
                 }catch (\Exception $e){
                     $_SESSION["message"]['warning'] = "La promotion n'a pas été ajouté !";
                     exit;
                 }
-                // Si la création réussit
-                $_SESSION["message"]['success'] = "La promotion créé avec succès !";
-                // Redirection vers l'accueil
-                $this->redirect('/accueil');
-                exit;
 
             } catch (\InvalidArgumentException $e) {
                 // Stocker le message d'erreur dans la session
@@ -49,9 +50,9 @@ class PromotionControleur extends AbstractController {
                 ];
                 // Rediriger vers le formulaire
                  $this->render('/promotion');
-                exit;
+                 exit;
             }
         }
-        $this->render('/promotion');
+        // $this->redirect('/');
     }
 }

@@ -16,10 +16,10 @@ class Promotion{
         if (empty($libelle) || empty($annee)) {
             throw new \InvalidArgumentException("Tous les champs doivent être renseignés.");
         }
-        // Vérifier que l'email n'existe pas déjà
+        // Vérifier que la promotion n'existe pas
         $existingLib = $this->entityManager->getRepository(Promotions::class)->findOneBy(['libelle' => $libelle]);
         $existingAn = $this->entityManager->getRepository(Promotions::class)->findOneBy(['annee' => $annee]);
-        if ($existingLib != NULL || $existingAn != NULL ) {
+        if ($existingLib != NULL && $existingAn != NULL ) {
             throw new \InvalidArgumentException("La promotion existe déjà !");
         }
         // 2. Créer une instance de la classe Promotion
